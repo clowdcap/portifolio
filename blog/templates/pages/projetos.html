@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}Projetos{% endblock %}
+
+{% block content %}
+
+
+    {% for post in projetos %}
+        <div>
+            <h3>{{post.titulo}}</h3>
+            <span>Criado por: {{post.autor}} - Data: {{post.data_pub}}</span>
+            <p>{{post.descricao}}</p>
+        </div>
+    {% endfor %}
+
+
+{% endblock %}
