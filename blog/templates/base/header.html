@@ -1,15 +1,44 @@
-<nav>
-    <ul>
-        <li>
-            <a href="{% url 'home' %}">Home</a>
-        </li>
+<header class="header" id="header">
+    <div class="header-content">
+        <div class="logo">
+            Logo da Empresa
+        </div> <!--logo-->
 
-        <li>
-            <a href="{% url 'projetos' %}">Projetos</a>
-        </li>
+        <div class="menu">
+            <ul class="ul-menu">
 
-        <li>
-            <a href="{% url 'contato' %}">Contato</a>
-        </li>
-    </ul>
-</nav>
+                <li class="li-menu">
+                    <a href="{% url 'home' %}" class="a-menu">Home</a>
+                </li> <!--li-menu-->
+                
+                <li class="li-menu">
+                    <a href="{% url 'projetos' %}" class="a-menu">Projetos</a>
+                </li> <!--li-menu-->
+
+                <li class="li-menu">
+                    <a href="#" class="a-menu">Serviços</a>
+                </li> <!--li-menu-->
+
+                <li class="li-menu">
+                    <a href="{% url 'contato' %}" class="a-menu">Contato</a>
+                </li> <!--li-menu-->
+
+            </ul> <!--ul-menu-->
+        </div> <!--menu-->
+
+        <div class="login">
+            <ul class="ul-login">
+
+                <li class="li-login">
+                    <a href="#" class="a-login">Login</a> 
+                </li> <!--li-login-->
+
+                <li class="li-login">
+                    <a href="#" class="a-login">Registrar</a>
+                </li> <!--li-login-->
+
+            </ul> <!--ul-login-->
+        </div> <!--login-->
+    </div> <!--header-contnet-->
+    
+</header>

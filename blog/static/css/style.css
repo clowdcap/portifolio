@@ -1,1 +1,233 @@
 @import url(//fonts.googleapis.com/css?family=Roboto:500,300,400);
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+/* Variáveis */
+:root{
+    --bg: #ccc
+}
+
+/* Defaiult setup */
+html, body {
+    overflow-x: hidden;
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.center {
+    max-width: 1280px !important;
+    margin: 0 auto !important;
+}
+
+.sep {
+    margin: 0 auto; 
+    padding: 0.5rem 0; 
+    border: 0;
+}
+
+
+
+html {
+    background-color: var(--bg);
+}
+
+    #page {
+        width: 100%;
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-template-rows: 4.5rem auto auto;
+        grid-template-areas: 
+                "topo topo topo"
+                "conteudo conteudo conteudo"
+                "rodape rodape rodape";
+    }
+    
+        #header {
+            grid-area: topo;        
+        }
+
+            .header-content {
+                width: 100%;
+                background-color: cadetblue;
+                border-radius: 0.4rem;
+                display: grid;
+                grid-template-columns: 33.33% 33.33% 33.33%;
+                grid-template-areas: 
+                        "logo menus login";
+                padding: 2rem 0.5rem;
+            }
+
+                .header-content .logo {
+                    grid-area: logo;
+                    text-align: left;
+                    padding: 0 1rem;
+                }
+
+                .header-content .menu {
+                    grid-area: menus;
+                    text-align: center;
+                }
+
+                    .header-content .menu .ul-menu {
+                        display: flex;
+                        justify-content: center;
+                    }
+
+                        .header-content .menu .ul-menu .li-menu {
+                            padding: 0 1rem;
+                        }
+
+                .header-content .login {
+                    grid-area: login;
+                    text-align: end;
+                }
+
+                    .header-content .login .ul-login {
+                        display: flex;
+                        justify-content: end;
+                    }
+
+                        .header-content .login .ul-login .li-login {
+                            padding: 0 1rem;
+                        }
+
+        #main {
+            grid-area: conteudo;
+            padding: 2rem;
+
+        }
+
+        #rodape {
+            grid-area: rodape;
+        }
+        
+            .rodape-content {
+                width: 100%;
+                background-color: cadetblue;
+                display: grid;
+                grid-template-columns: 33.33% 33.33% 33.33%;
+                grid-template-areas: 
+                        "mapa ads redes";
+                        
+                padding: 1rem 0.5rem;
+                text-align: center;
+                border-radius: 0.4rem;
+                
+            }
+
+                .rodape-content .mapa-site {
+                    grid-area: mapa;
+                    
+                }
+                    .rodape-content .mapa-site h3 {
+                        font-weight: 500;
+                    }
+
+                    .rodape-content .mapa-site .ul-mapa .li-mapa,
+                    .rodape-content .mapa-site .ul-mapa-login .li-mapa {
+                        padding: 0.1rem 0;
+                    }
+
+                .rodape-content .ads {
+                    grid-area: ads;
+                }
+
+                    .rodape-content .ads h3 {
+                        font-weight: 500;
+                    }
+
+                    .rodape-content .ads .ul-ads .li-ads .img-ads {
+                        width: 80%;
+                        height: 80%;
+                        padding: 0.5rem;
+                        margin: 0 auto;
+                        border: 1px solid black;
+                        
+                    }
+
+                .rodape-content .redes-sociais {
+                    grid-area: redes;
+                }
+
+                    .rodape-content .redes-sociais h3{
+                        font-weight: 500;
+                    }
+
+                    .rodape-content .redes-sociais .ul-rs .li-rs {
+                        padding: 0.5rem 0;
+                    }
+                
+            .span-footer {
+                text-align: center;
+                 grid-area: copys;
+                background-color: #555;
+                color: white;
+                padding: 1rem 0;
+            }
+                    
+        #main {
+            grid-template-columns: auto;
+            grid-template-rows: 1rem auto auto;
+            grid-template-areas: 
+                    "alert"
+                    "capa"
+                    "conteudo"
+                    "descricao";
+        }
+
+            .pop {
+                grid-area: alert;
+                text-align: center;
+                width: 100%;
+                background-color: rgb(39, 100, 102);
+                border-radius: 0.4rem;
+            }
+
+                .pop p {
+                    font-size: 12px;
+                    color: white;
+                    
+                }
+            
+            .capa {
+                grid-area: capa;
+                text-align: center;
+                width: 100%;
+                padding: 2rem 0;
+            }
+
+
+            .content {
+                grid: conteudo;
+                width: 100%;
+                padding: 2rem 0;
+                font-size: 16px;
+            }
+
+            .projeto {
+                padding: 2rem;
+                border-bottom: 2px solid rgba(85, 85, 85, 0.164);
+            }
+
+            .projeto span {
+                font-size: 12px;
+            }
+            
+            .titulo-post {
+               
+                font-size: 25px;
+            }

@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html>
 <head>
@@ -6,19 +7,25 @@
     <title>{% block title %}{% endblock %}</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
 
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 <body>
 
-    {% include 'base/header.html'%}
+    <div class="center">
+        <section id="page">
 
-    {% block content %}
-    {% endblock %}
+            {% include 'base/header.html'%}
+            <main id="main">
+                {% block content %}
+                {% endblock %}
+            </main>
+            {% include 'base/footer.html' %}
 
-    {% include 'base/footer.html' %}
-
+        </section> <!--page-->
+    </div> <!--center-->
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-        
+    <script src="{% static 'js/main.js'%}"></script>    
     
 </body>
 </html>

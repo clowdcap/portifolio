@@ -6,10 +6,10 @@
 
 
     {% for post in projetos %}
-        <div>
-            <h3>{{post.titulo}}</h3>
+        <div class="projeto">
+            <h3 class="titulo-post">{{post.titulo}}</h3>
             <span>Criado por: {{post.autor}} - Data: {{post.data_pub}}</span>
-            <p>{{post.descricao}}</p>
+            <p class="content">{{post.descricao}}</p>
         </div>
     {% endfor %}
 
